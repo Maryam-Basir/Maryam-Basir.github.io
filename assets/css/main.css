@@ -17,7 +17,6 @@
   --bi-circle-half: #000;
   --bi-bi-circle-half:#000;
   --title-content:#000;
-
 }
 
 :root[data-theme="dark"] {
@@ -340,7 +339,6 @@ h3.tl-title {
 
 h2 {
   line-height: 60px;
-  color: var(--title-content);
 }
 
 
