@@ -536,3 +536,6 @@ h3.md-4 {
 .btn#submit{
   color:"#fff";
 }
+a {
+    display: contents;
+}
