@@ -416,11 +416,11 @@
                 el: ".swiper-scrollbar",
                 hide: true,
             },
-            loop: swiper.slides.length === 1 ? false : true ,
-    autoplay: {
-      delay: 3000,
-  },
+          
         });
+        setInterval(function(){
+            swiper.slideNext();
+        },3000)
     </script>
 </body>
 
