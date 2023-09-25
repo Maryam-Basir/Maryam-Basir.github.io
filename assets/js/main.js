@@ -1,3 +1,25 @@
+let btn=document.getElementById("submit");
+btn.addEventListener(
+  "mouseenter",
+  (event) => {
+    event.target.style.color = "#000";
+    event.target.style.border = "1px solid #00668c";
+      event.target.style.background = "#fff";
+  },
+  false,
+);
+btn.addEventListener(
+  "mouseenter",
+  (event) => {
+    event.target.style.color = "#000";
+    event.target.style.border = "1px solid #00668c";
+      event.target.style.background = "#fff";
+  },
+  false,
+);
+
+
+
 function switcherTheme(){
 const rootElem=document.documentElement
 let dataTheme=rootElem.getAttribute('data-theme'), newTheme;
