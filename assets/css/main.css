@@ -530,4 +530,6 @@ h3.md-4 {
   margin-bottom: 50px;
 }
 
-
+.btn#submit{
+  color:"#fff";
+}
