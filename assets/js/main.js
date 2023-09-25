@@ -9,11 +9,10 @@ btn.addEventListener(
   false,
 );
 btn.addEventListener(
-  "mouseenter",
+  "mouseleave",
   (event) => {
-    event.target.style.color = "#000";
-    event.target.style.border = "1px solid #00668c";
-      event.target.style.background = "#fff";
+    event.target.style.color = "#fff";
+      event.target.style.background = "#00668c";
   },
   false,
 );
