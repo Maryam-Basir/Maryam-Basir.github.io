@@ -3,7 +3,7 @@ btn.addEventListener(
   "mouseenter",
   (event) => {
     event.target.style.color = "#000";
-    event.target.style.border = "1px solid #00668c";
+    event.target.style.border = "2px solid #00668c";
       event.target.style.background = "#fff";
   },
   false,
