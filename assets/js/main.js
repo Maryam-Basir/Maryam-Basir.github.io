@@ -4,10 +4,15 @@ let emailComposed = false;
 const themeButton = document.getElementById("theme-switcher");
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
+  document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#111923" : "#f8f9fc";
   themeButton.setAttribute("aria-pressed", String(theme === "dark"));
   themeButton.setAttribute("aria-label", t(`Switch to ${theme === "dark" ? "light" : "dark"} theme`));
 }
-try { if (localStorage.getItem("maryam-theme") === "dark") setTheme("dark"); } catch {}
+try {
+  setTheme(localStorage.getItem("maryam-theme") === "light" ? "light" : "dark");
+} catch {
+  setTheme("dark");
+}
 themeButton.addEventListener("click", () => {
   const theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
   setTheme(theme);
