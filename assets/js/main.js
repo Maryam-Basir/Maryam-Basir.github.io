@@ -104,3 +104,16 @@ function refreshLanguage() {
 }
 window.addEventListener("languagechange", refreshLanguage);
 refreshLanguage();
+
+const studioVideo = document.getElementById("studio-video");
+if (studioVideo) {
+  const showVideoError = () => { document.getElementById("video-status").hidden = false; };
+  studioVideo.addEventListener("error", showVideoError);
+  studioVideo.querySelector("source").addEventListener("error", showVideoError);
+  document.addEventListener("visibilitychange", () => { if (document.hidden) studioVideo.pause(); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting) studioVideo.pause();
+    }, { threshold: 0 }).observe(studioVideo);
+  }
+}
