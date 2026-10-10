@@ -1,6 +1,10 @@
 "use strict";
 (() => {
   const dictionary = {
+    "Loading portfolio…": "در حال آماده‌سازی سایت…",
+    "10": "۱۰",
+    "AI Tools": "ابزارهای هوش مصنوعی",
+    "Familiar with ChatGPT & Claude": "آشنایی با ChatGPT و Claude",
     "Maryam Basir Abyaneh — Database Developer": "مریم بصیرابیانه | توسعه‌دهنده دیتابیس",
     "Maryam Basir Abyaneh, database developer in Tehran specializing in SQL Server, PL/SQL, database design, and business systems.": "مریم بصیرابیانه، توسعه‌دهنده دیتابیس در تهران؛ متخصص SQL Server، PL/SQL، طراحی پایگاه داده و سامانه‌های سازمانی.",
     "Skip to content": "رفتن به محتوای اصلی",
@@ -179,7 +183,8 @@
   const originalDescription = description.content;
   function translate(value) {
     if (language === "en") return value;
-    if (dictionary[value]) return dictionary[value];
+    const normalized = value.replace(/\s+/g, " ").trim();
+    if (dictionary[normalized]) return dictionary[normalized];
     for (const [prefix, suffix, faPrefix, faSuffix] of [
       ["View ", "", "مشاهده ", ""],
       ["", " website screenshot", "تصویر وب‌سایت ", ""],
